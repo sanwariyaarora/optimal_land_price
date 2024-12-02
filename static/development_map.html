@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a2f6fc9629cc1ec6254ebb8339ca102e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a2f6fc9629cc1ec6254ebb8339ca102e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a2f6fc9629cc1ec6254ebb8339ca102e = L.map(
+                "map_a2f6fc9629cc1ec6254ebb8339ca102e",
+                {
+                    center: [13.0493089, 80.25523299999999],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5d093fc8bb16ce81a25872dac4e9eb5c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_5d093fc8bb16ce81a25872dac4e9eb5c.addTo(map_a2f6fc9629cc1ec6254ebb8339ca102e);
+        
+    
+            var marker_134ae7f46d7a62041991b9ffe1532bf2 = L.marker(
+                [13.0493089, 80.25523299999999],
+                {}
+            ).addTo(map_a2f6fc9629cc1ec6254ebb8339ca102e);
+        
+    
+            var icon_624bf56d305e121099849dd028fc215f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_134ae7f46d7a62041991b9ffe1532bf2.setIcon(icon_624bf56d305e121099849dd028fc215f);
+        
+    
+        var popup_1d5cbf6038ef68f53ffeda6d547e9714 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_79e230b6c4f1471d376fb1b925b85ff8 = $(`<div id="html_79e230b6c4f1471d376fb1b925b85ff8" style="width: 100.0%; height: 100.0%;">PIN Code Location</div>`)[0];
+                popup_1d5cbf6038ef68f53ffeda6d547e9714.setContent(html_79e230b6c4f1471d376fb1b925b85ff8);
+            
+        
+
+        marker_134ae7f46d7a62041991b9ffe1532bf2.bindPopup(popup_1d5cbf6038ef68f53ffeda6d547e9714)
+        ;
+
+        
+    
+    
+            var marker_cluster_e9fc7011815a892777ae964e8443b3c8 = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_fb028a023e55503403a5b0884a03ddf5 = L.marker(
+                [13.1501, 80.224],
+                {}
+            ).addTo(marker_cluster_e9fc7011815a892777ae964e8443b3c8);
+        
+    
+            var icon_a26504199ca131f4efd149bc73401513 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fb028a023e55503403a5b0884a03ddf5.setIcon(icon_a26504199ca131f4efd149bc73401513);
+        
+    
+        var popup_0376733fb8b22fda79566d8f521ae6b5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e878e7e3e034b1148f9ec59f721f67dc = $(`<div id="html_e878e7e3e034b1148f9ec59f721f67dc" style="width: 100.0%; height: 100.0%;">Chennai Metro - Madhavaram Station (Impact: 8)</div>`)[0];
+                popup_0376733fb8b22fda79566d8f521ae6b5.setContent(html_e878e7e3e034b1148f9ec59f721f67dc);
+            
+        
+
+        marker_fb028a023e55503403a5b0884a03ddf5.bindPopup(popup_0376733fb8b22fda79566d8f521ae6b5)
+        ;
+
+        
+    
+    
+            var marker_c4c60c247015fcb0108b96140e7f985b = L.marker(
+                [13.0922, 80.2921],
+                {}
+            ).addTo(marker_cluster_e9fc7011815a892777ae964e8443b3c8);
+        
+    
+            var icon_6e35952057b5bed71635d31a5f2eb4dd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c4c60c247015fcb0108b96140e7f985b.setIcon(icon_6e35952057b5bed71635d31a5f2eb4dd);
+        
+    
+        var popup_4634636542374652dabd114060bd589e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_df37de9cbf3e6cbf6e2f5986fb803b1f = $(`<div id="html_df37de9cbf3e6cbf6e2f5986fb803b1f" style="width: 100.0%; height: 100.0%;">Chennai Sea Bridge (Impact: 7)</div>`)[0];
+                popup_4634636542374652dabd114060bd589e.setContent(html_df37de9cbf3e6cbf6e2f5986fb803b1f);
+            
+        
+
+        marker_c4c60c247015fcb0108b96140e7f985b.bindPopup(popup_4634636542374652dabd114060bd589e)
+        ;
+
+        
+    
+    
+            var marker_ee0a14481c6c96adf9387d68eb423fbe = L.marker(
+                [13.0827, 80.2707],
+                {}
+            ).addTo(marker_cluster_e9fc7011815a892777ae964e8443b3c8);
+        
+    
+            var icon_8a3b9d59b523753844df4409f91c6bfd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ee0a14481c6c96adf9387d68eb423fbe.setIcon(icon_8a3b9d59b523753844df4409f91c6bfd);
+        
+    
+        var popup_5b40f9336e85871dd4004cd357bb30bc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b733c3ec4711a956ee3bde6f1189c8a = $(`<div id="html_4b733c3ec4711a956ee3bde6f1189c8a" style="width: 100.0%; height: 100.0%;">Space Industrial & Propellant Park (Impact: 10)</div>`)[0];
+                popup_5b40f9336e85871dd4004cd357bb30bc.setContent(html_4b733c3ec4711a956ee3bde6f1189c8a);
+            
+        
+
+        marker_ee0a14481c6c96adf9387d68eb423fbe.bindPopup(popup_5b40f9336e85871dd4004cd357bb30bc)
+        ;
+
+        
+    
+    
+            var marker_9768ac0089730afc45f4336a16aaf923 = L.marker(
+                [13.0827, 80.2707],
+                {}
+            ).addTo(marker_cluster_e9fc7011815a892777ae964e8443b3c8);
+        
+    
+            var icon_f479745ed40c20a10c6167ad92f0f995 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9768ac0089730afc45f4336a16aaf923.setIcon(icon_f479745ed40c20a10c6167ad92f0f995);
+        
+    
+        var popup_d815cdd2e3bcf636093467910faa79d3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2558bc1958cbc1dedc5b55e28d652750 = $(`<div id="html_2558bc1958cbc1dedc5b55e28d652750" style="width: 100.0%; height: 100.0%;">Chennai Peripheral Ring Road (Impact: 8)</div>`)[0];
+                popup_d815cdd2e3bcf636093467910faa79d3.setContent(html_2558bc1958cbc1dedc5b55e28d652750);
+            
+        
+
+        marker_9768ac0089730afc45f4336a16aaf923.bindPopup(popup_d815cdd2e3bcf636093467910faa79d3)
+        ;
+
+        
+    
+    
+            var marker_df8c7cbdc1811b9114371030dda0fd45 = L.marker(
+                [13.0909, 80.2843],
+                {}
+            ).addTo(marker_cluster_e9fc7011815a892777ae964e8443b3c8);
+        
+    
+            var icon_873c724d6c173eea2845f4a1fef5e85b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_df8c7cbdc1811b9114371030dda0fd45.setIcon(icon_873c724d6c173eea2845f4a1fef5e85b);
+        
+    
+        var popup_4fa8c6a3610f8d59b0866d2604fddf08 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e517c0237751eed7968281b75b1c31b4 = $(`<div id="html_e517c0237751eed7968281b75b1c31b4" style="width: 100.0%; height: 100.0%;">Multi-modal Bus Terminus, Broadway (Impact: 6)</div>`)[0];
+                popup_4fa8c6a3610f8d59b0866d2604fddf08.setContent(html_e517c0237751eed7968281b75b1c31b4);
+            
+        
+
+        marker_df8c7cbdc1811b9114371030dda0fd45.bindPopup(popup_4fa8c6a3610f8d59b0866d2604fddf08)
+        ;
+
+        
+    
+    
+            var marker_719f184f02eca390b87326713a64a344 = L.marker(
+                [12.9857, 80.2206],
+                {}
+            ).addTo(marker_cluster_e9fc7011815a892777ae964e8443b3c8);
+        
+    
+            var icon_ab45222fb71c76eb2c339c8671c93c2d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_719f184f02eca390b87326713a64a344.setIcon(icon_ab45222fb71c76eb2c339c8671c93c2d);
+        
+    
+        var popup_ad5b3df845ea52bbdf7adbffaebe2632 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e9c84c33ef8418c866cf06dbe4d5bd3f = $(`<div id="html_e9c84c33ef8418c866cf06dbe4d5bd3f" style="width: 100.0%; height: 100.0%;">Outer Ring Road Expansion, Chennai (Impact: 7)</div>`)[0];
+                popup_ad5b3df845ea52bbdf7adbffaebe2632.setContent(html_e9c84c33ef8418c866cf06dbe4d5bd3f);
+            
+        
+
+        marker_719f184f02eca390b87326713a64a344.bindPopup(popup_ad5b3df845ea52bbdf7adbffaebe2632)
+        ;
+
+        
+    
+    
+            var marker_fdda0c7b0858391022e83d28bc973d94 = L.marker(
+                [13.0391, 80.1067],
+                {}
+            ).addTo(marker_cluster_e9fc7011815a892777ae964e8443b3c8);
+        
+    
+            var icon_2755f3fb322a3f121983875f1fef3c74 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fdda0c7b0858391022e83d28bc973d94.setIcon(icon_2755f3fb322a3f121983875f1fef3c74);
+        
+    
+        var popup_e549e035e6e19fa319a485c44df248df = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d33153d739cc6c86396678c324f911d4 = $(`<div id="html_d33153d739cc6c86396678c324f911d4" style="width: 100.0%; height: 100.0%;">Hi-tech Film City, Poonamallee (Impact: 6)</div>`)[0];
+                popup_e549e035e6e19fa319a485c44df248df.setContent(html_d33153d739cc6c86396678c324f911d4);
+            
+        
+
+        marker_fdda0c7b0858391022e83d28bc973d94.bindPopup(popup_e549e035e6e19fa319a485c44df248df)
+        ;
+
+        
+    
+    
+            var marker_ff116bce97731fca3ed011a240d01448 = L.marker(
+                [13.075, 80.227],
+                {}
+            ).addTo(marker_cluster_e9fc7011815a892777ae964e8443b3c8);
+        
+    
+            var icon_7c14f13f5d2366a2f71e15763fa3404d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ff116bce97731fca3ed011a240d01448.setIcon(icon_7c14f13f5d2366a2f71e15763fa3404d);
+        
+    
+        var popup_0a62088ff320e7c25b722e9132d68597 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2072d2b03ac151e7d29791af25498dde = $(`<div id="html_2072d2b03ac151e7d29791af25498dde" style="width: 100.0%; height: 100.0%;">Shenoy Nagar Park Restoration (Impact: 6)</div>`)[0];
+                popup_0a62088ff320e7c25b722e9132d68597.setContent(html_2072d2b03ac151e7d29791af25498dde);
+            
+        
+
+        marker_ff116bce97731fca3ed011a240d01448.bindPopup(popup_0a62088ff320e7c25b722e9132d68597)
+        ;
+
+        
+    
+    
+            var marker_0ab007521f0f67ad9be7c905e3fc75f7 = L.marker(
+                [13.0851, 80.21],
+                {}
+            ).addTo(marker_cluster_e9fc7011815a892777ae964e8443b3c8);
+        
+    
+            var icon_c50d4ad9f756a1ad81afd4f5e81fc4da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0ab007521f0f67ad9be7c905e3fc75f7.setIcon(icon_c50d4ad9f756a1ad81afd4f5e81fc4da);
+        
+    
+        var popup_5d97c540af6b2752560d0618d9aa7323 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c5010e2f7663f6501a47742fd1fc7051 = $(`<div id="html_c5010e2f7663f6501a47742fd1fc7051" style="width: 100.0%; height: 100.0%;">Inclusive Park for Disabled Children (Impact: 7)</div>`)[0];
+                popup_5d97c540af6b2752560d0618d9aa7323.setContent(html_c5010e2f7663f6501a47742fd1fc7051);
+            
+        
+
+        marker_0ab007521f0f67ad9be7c905e3fc75f7.bindPopup(popup_5d97c540af6b2752560d0618d9aa7323)
+        ;
+
+        
+    
+    
+            var marker_616d5c763f3af1aa41620a0a0fbc1609 = L.marker(
+                [13.083, 80.2707],
+                {}
+            ).addTo(marker_cluster_e9fc7011815a892777ae964e8443b3c8);
+        
+    
+            var icon_3fa0e557544cd66e3a2c2edf59691f81 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_616d5c763f3af1aa41620a0a0fbc1609.setIcon(icon_3fa0e557544cd66e3a2c2edf59691f81);
+        
+    
+        var popup_711b41e83fc349a3243ab81964c147ce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac9b82e511525328e08b260786709933 = $(`<div id="html_ac9b82e511525328e08b260786709933" style="width: 100.0%; height: 100.0%;">100 New Parks Across the City (Impact: 8)</div>`)[0];
+                popup_711b41e83fc349a3243ab81964c147ce.setContent(html_ac9b82e511525328e08b260786709933);
+            
+        
+
+        marker_616d5c763f3af1aa41620a0a0fbc1609.bindPopup(popup_711b41e83fc349a3243ab81964c147ce)
+        ;
+
+        
+    
+    
+            var marker_11847ca12db01459aff95dca444ebacc = L.marker(
+                [13.0496, 80.1271],
+                {}
+            ).addTo(marker_cluster_e9fc7011815a892777ae964e8443b3c8);
+        
+    
+            var icon_38a4a8cc8aee385e5759bdf4b896d524 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_11847ca12db01459aff95dca444ebacc.setIcon(icon_38a4a8cc8aee385e5759bdf4b896d524);
+        
+    
+        var popup_76d6f5a67c601ba33d86f40a17c28f1c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b16b4ccfdfd9a56c5552b55a94b2216a = $(`<div id="html_b16b4ccfdfd9a56c5552b55a94b2216a" style="width: 100.0%; height: 100.0%;">Hitech The Crest Phase 2 Residential Plots (Impact: 6)</div>`)[0];
+                popup_76d6f5a67c601ba33d86f40a17c28f1c.setContent(html_b16b4ccfdfd9a56c5552b55a94b2216a);
+            
+        
+
+        marker_11847ca12db01459aff95dca444ebacc.bindPopup(popup_76d6f5a67c601ba33d86f40a17c28f1c)
+        ;
+
+        
+    
+    
+            var marker_41ee7289c6e153f1739d2e8e4ec6eb97 = L.marker(
+                [13.0826, 80.1462],
+                {}
+            ).addTo(marker_cluster_e9fc7011815a892777ae964e8443b3c8);
+        
+    
+            var icon_5a4c416f5e4585db2b7d7b9a010422f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_41ee7289c6e153f1739d2e8e4ec6eb97.setIcon(icon_5a4c416f5e4585db2b7d7b9a010422f8);
+        
+    
+        var popup_fb055980b2f8e1bef1b124ac12377e40 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_511caf6af9afcb4af9cb959fd3539bc1 = $(`<div id="html_511caf6af9afcb4af9cb959fd3539bc1" style="width: 100.0%; height: 100.0%;">GP Homes Ethulia Project (Impact: 6)</div>`)[0];
+                popup_fb055980b2f8e1bef1b124ac12377e40.setContent(html_511caf6af9afcb4af9cb959fd3539bc1);
+            
+        
+
+        marker_41ee7289c6e153f1739d2e8e4ec6eb97.bindPopup(popup_fb055980b2f8e1bef1b124ac12377e40)
+        ;
+
+        
+    
+    
+            var marker_c924158d1f6905b2e075b62ffe941c55 = L.marker(
+                [13.0292, 80.2472],
+                {}
+            ).addTo(marker_cluster_e9fc7011815a892777ae964e8443b3c8);
+        
+    
+            var icon_d207475116bdba67de9510dd99681007 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c924158d1f6905b2e075b62ffe941c55.setIcon(icon_d207475116bdba67de9510dd99681007);
+        
+    
+        var popup_599926899bf1b7a1ab203a97fd9284ec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25c838c94e76a229e4ed30db24389f1f = $(`<div id="html_25c838c94e76a229e4ed30db24389f1f" style="width: 100.0%; height: 100.0%;">Smart Classrooms for Chennai Schools (Impact: 7)</div>`)[0];
+                popup_599926899bf1b7a1ab203a97fd9284ec.setContent(html_25c838c94e76a229e4ed30db24389f1f);
+            
+        
+
+        marker_c924158d1f6905b2e075b62ffe941c55.bindPopup(popup_599926899bf1b7a1ab203a97fd9284ec)
+        ;
+
+        
+    
+    
+            var marker_761f67935073404ee954dbfe327ce3d9 = L.marker(
+                [13.0458, 80.247],
+                {}
+            ).addTo(marker_cluster_e9fc7011815a892777ae964e8443b3c8);
+        
+    
+            var icon_ff313cb1201a3578f4cf3d064a74dc80 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_761f67935073404ee954dbfe327ce3d9.setIcon(icon_ff313cb1201a3578f4cf3d064a74dc80);
+        
+    
+        var popup_b142a7e19617f8bee697da01d544cb7e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_22d25fbefaa4021cb284ed26773258a6 = $(`<div id="html_22d25fbefaa4021cb284ed26773258a6" style="width: 100.0%; height: 100.0%;">Pedestrian-Friendly Pondy Bazaar (Impact: 8)</div>`)[0];
+                popup_b142a7e19617f8bee697da01d544cb7e.setContent(html_22d25fbefaa4021cb284ed26773258a6);
+            
+        
+
+        marker_761f67935073404ee954dbfe327ce3d9.bindPopup(popup_b142a7e19617f8bee697da01d544cb7e)
+        ;
+
+        
+    
+    
+            var marker_0ea2df7924ee331557e4b7b866b677fc = L.marker(
+                [13.0562, 80.2486],
+                {}
+            ).addTo(marker_cluster_e9fc7011815a892777ae964e8443b3c8);
+        
+    
+            var icon_a74b032fb3a11dd57d8669f0e57c8ed7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0ea2df7924ee331557e4b7b866b677fc.setIcon(icon_a74b032fb3a11dd57d8669f0e57c8ed7);
+        
+    
+        var popup_79fb97199292e3238d305f353bb17176 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0cf3526096211b88bfd0294ea5e42fa6 = $(`<div id="html_0cf3526096211b88bfd0294ea5e42fa6" style="width: 100.0%; height: 100.0%;">Cycling Tracks along Buckingham Canal (Impact: 7)</div>`)[0];
+                popup_79fb97199292e3238d305f353bb17176.setContent(html_0cf3526096211b88bfd0294ea5e42fa6);
+            
+        
+
+        marker_0ea2df7924ee331557e4b7b866b677fc.bindPopup(popup_79fb97199292e3238d305f353bb17176)
+        ;
+
+        
+    
+    
+            var marker_a1bf069a5a94db1b4f7457e7964fe71d = L.marker(
+                [13.0827, 80.2707],
+                {}
+            ).addTo(marker_cluster_e9fc7011815a892777ae964e8443b3c8);
+        
+    
+            var icon_22b6e0a3b754cc5e7d794a5d92533050 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a1bf069a5a94db1b4f7457e7964fe71d.setIcon(icon_22b6e0a3b754cc5e7d794a5d92533050);
+        
+    
+        var popup_bc9dab178c078b031281f2e9106c1a51 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c54e1ddc6e7d9fb2bd58e2be632a0bb6 = $(`<div id="html_c54e1ddc6e7d9fb2bd58e2be632a0bb6" style="width: 100.0%; height: 100.0%;">Command and Control Center (CCC) (Impact: 9)</div>`)[0];
+                popup_bc9dab178c078b031281f2e9106c1a51.setContent(html_c54e1ddc6e7d9fb2bd58e2be632a0bb6);
+            
+        
+
+        marker_a1bf069a5a94db1b4f7457e7964fe71d.bindPopup(popup_bc9dab178c078b031281f2e9106c1a51)
+        ;
+
+        
+    
+    
+            marker_cluster_e9fc7011815a892777ae964e8443b3c8.addTo(map_a2f6fc9629cc1ec6254ebb8339ca102e);
+        
+</script>
+</html>
